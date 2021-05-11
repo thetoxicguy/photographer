@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   bottom: 0;
@@ -1205,4 +1205,71 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+/* -------------------------------------------
+Expand buttons
+------------------------------------------- */
+
+.expand_button {
+  opacity: .4;
+  /* position: fixed; */
+  /* left: 50%;
+  top: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.e-button {
+  color: #fff;
+  background-color: white;
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  max-width: 30px;
+  -webkit-transition: max-width 0.3s ease-in-out;
+  -moz-transition: max-width 0.3s ease-in-out;
+  -o-transition: max-width 0.3s ease-in-out;
+  transition: max-width 0.3s linear;
+}
+
+.e-button-text {
+  display: block;
+  white-space: nowrap;
+  color: black
+}
+
+.e-button:hover {
+  background-color: white;
+  color: #fff;
+  max-width: 280px
+}
+
+#homebutton {
+  position: absolute;
+  left: 3%;
+  top: 25%
+}
+#gallerybutton {
+  position: absolute;
+  left: 3%;
+  top: 35%
+}
+#onsalebutton {
+  position: absolute;
+  left: 3%;
+  top: 45%
+}
+#biobutton {
+  position: absolute;
+  left: 3%;
+  top: 55%
+}
+
+#contactbutton {
+  position: absolute;
+  left: 3%;
+  top: 65%
 }
