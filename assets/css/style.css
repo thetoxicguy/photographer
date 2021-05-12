@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 
-video {
+/* video {
   z-index: -1;
   object-fit: cover;
   width: 100vw;
@@ -268,15 +268,40 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-}
+} */
 
 #hero {
   width: 100%;
   height: 100vh;
-  /* background: url("../img/hero-bg.jpg") top right no-repeat; */
-  background-size: cover;
-  position: relative;
+  background-color: black;
+  background-image: url(/assets/img/background/andres_dash_01.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: slide 20s;
 }
+
+@keyframes slide {
+  0%{
+    background-image: url(/assets/img/background/andres_dash_01.jpg)
+  }
+  16%{
+    background-image: url(/assets/img/background/andres_dash_02.jpg)
+  }
+  33%{
+    background-image: url(/assets/img/background/andres_dash_03.jpg)
+  }
+  50%{
+    background-image: url(/assets/img/background/andres_dash_04.jpg)
+  }
+  66%{
+    background-image: url(/assets/img/background/andres_dash_05.jpg)
+  }
+  82%{
+    background-image: url(/assets/img/background/andres_dash_06.jpg)
+  }
+}
+
 
 @media (min-width: 992px) {
   #hero {
