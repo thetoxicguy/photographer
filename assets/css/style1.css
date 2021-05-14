@@ -1,10 +1,16 @@
+/**
+* Template Name: MyResume - v4.1.0
+* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: rgba(0, 0, 0, 0.75)
+  color: #272829;
 }
 
 a {
@@ -114,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   bottom: 0;
@@ -187,9 +193,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 992px) {
-  .page-content {
-    padding-left: 20ex;
-  }
   .nav-menu a {
     width: 56px;
   }
@@ -201,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover, .nav-menu .active, .nav-menu li:hover > a {
   color: #fff;
-  background: #3719df;
+  background: #0563bb;
 }
 
 .nav-menu a:hover span, .nav-menu .active span, .nav-menu li:hover > a span {
@@ -237,7 +240,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  background-color: rgb(195, 202, 211);
   color: #45505b;
 }
 
@@ -251,13 +253,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-active .mobile-nav-toggle {
   color: #fff;
-  background-color: #3719df;
+  background-color: #0563bb;
 }
 
 /*--------------------------------------------------------------
-# Home Section
+# Hero Section
 --------------------------------------------------------------*/
-#home {
+
+/* video {
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+
+#hero {
   width: 100%;
   height: 100vh;
   background-color: black;
@@ -290,13 +303,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
 @media (min-width: 992px) {
-  #home {
+  #hero {
     padding-left: 160px;
   }
 }
 
-#home:before {
+#hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
@@ -306,37 +320,36 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
-/* #home */
-h1 {
+#hero h1 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #d18d34;
-  text-shadow: 0 0 1px rgb(185, 53, 168), 0 0 0px #0000FF;
+  color: #45505b;
+  text-shadow: 0 0 1px white, 0 0 0px #0000FF;
 }
 
-#home p {
-  color: #fdeeee;
+#hero p {
+  color: white;
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
   text-shadow: 0 0 2px black, 0 0 0px #0000FF;
 }
 
-#home p span {
-  color: #3719df;
+#hero p span {
+  color: #1d252c;
   letter-spacing: 1px;
   text-shadow: 0 0 3px white, 0 0 0px #0000FF;
 }
 
-#home .social-links a i{
-  color: #fdeeee;
+#hero .social-links a  i{
+  color: #540b5e;
   margin-top: 30px;
-  text-shadow: 0 0 3px black, 0 0 0px #0000FF;
+  text-shadow: 0 0 3px white, 0 0 0px #0000FF;
 }
 
-#home .social-links a {
+#hero .social-links a {
   font-size: 24px;
   display: inline-block;
   color: #45505b;
@@ -345,19 +358,19 @@ h1 {
   transition: 0.3s;
 }
 
-#home .social-links a i:hover {
-  color: #d18d34;
+#hero .social-links a:hover {
+  color: #0563bb;
 }
 
 @media (max-width: 992px) {
-  #home {
+  #hero {
     text-align: center;
   }
-  #home h1 {
+  #hero h1 {
     font-size: 32px;
     line-height: 36px;
   }
-  #home p {
+  #hero p {
     margin-top: 10px;
     font-size: 20px;
     line-height: 24px;
@@ -524,11 +537,6 @@ section {
   height: 10px;
   transition: .9s;
   background-color: #0563bb;
-}
-
-.skillicon{
-  width:15px;
-  height:15px;
 }
 
 /*--------------------------------------------------------------
@@ -1223,4 +1231,134 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+/* -------------------------------------------
+Expand buttons
+------------------------------------------- */
+
+.expand_button {
+  opacity: .4;
+  /* position: fixed; */
+  /* left: 50%;
+  top: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.e-button {
+  color: #fff;
+  background-color: white;
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  max-width: 30px;
+  -webkit-transition: max-width 0.3s ease-in-out;
+  -moz-transition: max-width 0.3s ease-in-out;
+  -o-transition: max-width 0.3s ease-in-out;
+  transition: max-width 0.3s linear;
+}
+
+.e-button-text {
+  display: block;
+  white-space: nowrap;
+  color: black
+}
+
+.e-button:hover {
+  background-color: white;
+  color: #fff;
+  max-width: 280px
+}
+
+#homebutton {
+  position: absolute;
+  left: 3%;
+  top: 25%
+}
+#gallerybutton {
+  position: absolute;
+  left: 3%;
+  top: 35%
+}
+#onsalebutton {
+  position: absolute;
+  left: 3%;
+  top: 45%
+}
+#biobutton {
+  position: absolute;
+  left: 3%;
+  top: 55%
+}
+
+#contactbutton {
+  position: absolute;
+  left: 3%;
+  top: 65%
+}
+
+/* ----------------------------------------------------------------
+Gallery box
+---------------------------------------------------------------- */
+
+.gallery_box{
+
+  padding:0;
+  display: flow-root;
+}
+
+.gallery_box li{
+  width:30%;
+  max-width: 100% ;
+  display:inline-block;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: 1vw;
+}
+
+.gallery_box li:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.gallery_box li img{-webkit-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;}
+.gallery_box li:nth-child(even) {
+  height: 304px;
+}
+.gallery_box li:nth-child(odd) {
+  height: 438px; 
+}
+.gallery_box li:nth-child(odd) .box_data{ background:rgba(0,0,0,0.17) }
+.gallery_box li:nth-child(even) .box_data{ background:rgba(0,44,255,0.27) }
+.gallery_box .box_data{ position:absolute; top: 0; left: 0; right:0; bottom:0; color:#fff;}
+.gallery_box .box_data span{ position:absolute; top: 50%; transform: translateY(-50%); left:0 ; right:0; font-size:24px;}
+.gallery_box li:hover .box_data{ background:rgba(255,0,39,0.55)}
+
+video {
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.col {
+  color: white;
+  text-shadow: 0 0 1px black, 0 0 0px #0000FF;
+}
+
+.col-md-auto {
+  color: white;
+  text-shadow: 0 0 1px black, 0 0 0px #0000FF;  
 }
