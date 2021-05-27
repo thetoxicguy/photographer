@@ -139,3 +139,18 @@ footer{
 footer a,footer a:hover{
     color: #88C425;
 }
+
+/* 
+------------------- Modal and carousel ----------------------
+ */
+
+.modal-content {
+    color: white;
+	background-color: rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.carousel-control-prev-icon, .sr-only span {
+    color: #d18d34;
+    text-shadow: 0 0 1px rgb(185, 53, 168), 0 0 0px #0000FF;  
+ }
